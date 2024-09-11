@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { useState, useMemo } from 'react'
 
 import isEmpty from '../helpers/isEmpty'
@@ -22,7 +23,6 @@ const AuthProvider = ({ children }) => {
 
   const authValue = useMemo(() => ({
     user: currentUser?.user || null,
-    token: currentUser?.accessToken,
     isAuthenticated: !!currentUser?.user?.id,
     setUser: setUserHandler,
     logout: logoutHandler
@@ -33,6 +33,10 @@ const AuthProvider = ({ children }) => {
       {children}
     </AuthContext.Provider>
   )
+}
+
+AuthProvider.propTypes = {
+  children: PropTypes.node
 }
 
 export default AuthProvider
