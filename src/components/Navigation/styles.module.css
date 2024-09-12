@@ -1,5 +1,4 @@
-.profile_drop_down
-{
+.profile_drop_down {
   @apply block;
   @apply px-4;
   @apply py-2;
@@ -23,7 +22,7 @@
 .mobile_menu.active {
   @apply border-indigo-500;
   @apply text-indigo-700;
-  @apply bg-indigo-50;
+  @apply bg-neutral-900;
 }
 
 .mobile_menu.default {}
@@ -41,6 +40,7 @@
 .desktop_menu.active {
   @apply border-indigo-500;
   @apply text-gray-900;
+  @apply dark:text-indigo-300;
 }
 
 .desktop_menu.default {
@@ -48,6 +48,7 @@
   @apply text-gray-500;
   @apply hover:border-gray-300;
   @apply hover:text-gray-700;
+  @apply dark:text-white;
 }
 
 .desktop_menu_search {
@@ -69,4 +70,6 @@
   @apply focus:ring-indigo-600;
   @apply sm:text-sm;
   @apply sm:leading-6;
+  @apply dark:bg-neutral-800 !important;
+  @apply dark:text-white;
 }

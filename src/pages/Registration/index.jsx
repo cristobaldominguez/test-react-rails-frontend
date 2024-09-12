@@ -5,7 +5,7 @@ import useAuth from '../../hooks/useAuth'
 import useServer from '../../hooks/useServer'
 import Dropzone from '../../components/DropZone/index.jsx'
 
-function Registration() {
+function Registration () {
   const { post } = useServer()
   const { setUser } = useAuth()
   const navigate = useNavigate()
@@ -106,12 +106,12 @@ function Registration() {
                   />
                 </div>
 
-                <div className="col-span-full">
-              <label htmlFor="cover-photo" className="block text-sm font-medium leading-6 text-gray-900">
-                Avatar
-              </label>
-              <Dropzone setAvatar={setAvatar} />
-              </div>
+                <div className='col-span-full'>
+                  <label htmlFor='cover-photo' className='block text-sm font-medium leading-6 text-gray-700 dark:text-white'>
+                    Avatar
+                  </label>
+                  <Dropzone setAvatar={setAvatar} />
+                </div>
 
               </div>
             </div>

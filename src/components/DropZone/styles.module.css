@@ -2,7 +2,7 @@
   @apply relative;
   @apply cursor-pointer;
   @apply rounded-md;
-  @apply bg-white;
+  @apply dark:bg-transparent;
   @apply font-semibold;
   @apply text-indigo-600;
   @apply focus-within:outline-none;
@@ -22,6 +22,7 @@
   @apply border;
   @apply border-dashed;
   @apply border-gray-900/25;
+  @apply dark:border-white;
 }
 
 .dropzone.hover {
