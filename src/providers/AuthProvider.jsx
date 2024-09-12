@@ -23,6 +23,7 @@ const AuthProvider = ({ children }) => {
 
   const authValue = useMemo(() => ({
     user: currentUser?.user || null,
+    token: currentUser?.token,
     isAuthenticated: !!currentUser?.user?.id,
     setUser: setUserHandler,
     logout: logoutHandler

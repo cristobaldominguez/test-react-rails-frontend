@@ -1,6 +1,6 @@
 import { apiUrl } from '../config'
 
-async function Http ({ method = 'GET', url = '/', body = null }) {
+async function Http ({ method = 'GET', url = '/', token = null, body = null }) {
   if (!url.startsWith('/')) throw new Error('URL must start with /')
 
   const isFormData = body instanceof FormData
@@ -11,6 +11,10 @@ async function Http ({ method = 'GET', url = '/', body = null }) {
       Accept: 'application/json',
     },
     redirect: "follow"
+  }
+
+  if (token) {
+    config.headers.Authorization = `${token}`
   }
 
   if (!isFormData) {
@@ -30,7 +34,7 @@ async function Http ({ method = 'GET', url = '/', body = null }) {
     const body = await response.json()
     if (!response.ok) throw body.error
 
-    return { body: body.status, loading: false, error: null }
+    return { token: response?.headers?.get('authorization'), body, loading: false, error: null }
   } catch (error) {
     return { body: null, loading: false, error }
   }
