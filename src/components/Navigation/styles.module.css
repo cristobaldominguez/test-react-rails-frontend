@@ -1,0 +1,72 @@
+.profile_drop_down
+{
+  @apply block;
+  @apply px-4;
+  @apply py-2;
+  @apply text-base;
+  @apply font-medium;
+  @apply text-gray-500;
+  @apply hover:bg-gray-100;
+  @apply hover:text-gray-800;
+}
+
+.mobile_menu {
+  @apply block;
+  @apply border-l-4;
+  @apply py-2;
+  @apply pl-3;
+  @apply pr-4;
+  @apply text-base;
+  @apply font-medium;
+}
+
+.mobile_menu.active {
+  @apply border-indigo-500;
+  @apply text-indigo-700;
+  @apply bg-indigo-50;
+}
+
+.mobile_menu.default {}
+
+.desktop_menu {
+  @apply inline-flex;
+  @apply items-center;
+  @apply border-b-2;
+  @apply px-1;
+  @apply pt-1;
+  @apply text-sm;
+  @apply font-medium;
+}
+
+.desktop_menu.active {
+  @apply border-indigo-500;
+  @apply text-gray-900;
+}
+
+.desktop_menu.default {
+  @apply border-transparent;
+  @apply text-gray-500;
+  @apply hover:border-gray-300;
+  @apply hover:text-gray-700;
+}
+
+.desktop_menu_search {
+  @apply block;
+  @apply w-full;
+  @apply rounded-md !important;
+  @apply border-0 !important;
+  @apply bg-white !important;
+  @apply py-1.5 !important;
+  @apply pl-10 !important;
+  @apply pr-3 !important;
+  @apply text-gray-900;
+  @apply ring-1;
+  @apply ring-inset;
+  @apply ring-gray-300;
+  @apply placeholder:text-gray-400;
+  @apply focus:ring-2;
+  @apply focus:ring-inset;
+  @apply focus:ring-indigo-600;
+  @apply sm:text-sm;
+  @apply sm:leading-6;
+}

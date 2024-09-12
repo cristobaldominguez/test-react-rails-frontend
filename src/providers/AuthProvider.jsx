@@ -16,17 +16,11 @@ const AuthProvider = ({ children }) => {
     return setUser(user)
   }
 
-  const logoutHandler = () => {
-    window.localStorage.removeItem(userLocalStorageKey)
-    return setUser(null)
-  }
-
   const authValue = useMemo(() => ({
     user: currentUser?.user || null,
     token: currentUser?.token,
     isAuthenticated: !!currentUser?.user?.id,
-    setUser: setUserHandler,
-    logout: logoutHandler
+    setUser: setUserHandler
   }), [currentUser])
 
   return (
