@@ -8,9 +8,9 @@ async function Http ({ method = 'GET', url = '/', token = null, body = null }) {
   const config = {
     method,
     headers: {
-      Accept: 'application/json',
+      Accept: 'application/json'
     },
-    redirect: "follow"
+    redirect: 'follow'
   }
 
   if (token) {
